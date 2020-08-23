@@ -9,6 +9,7 @@ module.exports = {
         isSplit: false, // 是否分割
         name: '' //代码块名称
     }, // 代码分割
-
+    isPrefetch: false,
+    isPreload: false,
     externals: {}
 };

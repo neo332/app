@@ -16,6 +16,18 @@ module.exports = {
         }
         // cdn引入资源
         config.externals(optimization.externals);
+
+        // 预加载
+        if (!optimization.isPrefetch) {
+            config.plugins.delete('prefetch');
+        }
+        if (!optimization.isPreload) {
+            config.plugins.delete('preload');
+        }
+        // config.plugin('html').tap(args => {
+        //     args[0].hash = true;
+        //     return args;
+        // });
     },
 
     css: {
